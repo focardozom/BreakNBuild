@@ -1,0 +1,22 @@
+Package: BreakNBuild
+Title: Optimizing Machine Learning Models through Sample Size Variation in Training Subsets
+Version: 0.0.0.9000
+Authors@R: 
+    person("Francisco", "Cardozo", , "foc9@miami.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-1925-4954"))
+Description: BreakNBuild's help to dynamically 
+  segments datasets into training and validation subsets, allowing for 
+  the systematic evaluation of machine learning model 
+  performance across varying sample sizes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    rsample
+VignetteBuilder: knitr
