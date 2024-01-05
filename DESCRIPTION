@@ -13,11 +13,19 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Suggests: 
+    here,
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
 Config/testthat/edition: 3
 Imports: 
-    rsample
+    broom,
+    dplyr,
+    purrr,
+    rsample,
+    tidyr,
+    tidyselect,
+    tune,
+    yardstick
 VignetteBuilder: knitr
 URL: https://focardozom.github.io/BreakNBuild/

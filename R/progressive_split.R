@@ -32,7 +32,7 @@ progressive_split <- function(data, validation_size = 0.2, start_size = 2) {
   }
 
   # Calculate the size of the validation set
-  validation_n <- max(1, floor(n * validation_size))
+  validation_n <- max(0, floor(n * validation_size))
   training_max_n <- n - validation_n
 
   if (start_size < 1 || start_size > training_max_n) {
