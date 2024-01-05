@@ -20,3 +20,4 @@ Config/testthat/edition: 3
 Imports: 
     rsample
 VignetteBuilder: knitr
+URL: https://focardozom.github.io/BreakNBuild/
