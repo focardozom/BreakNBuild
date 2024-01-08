@@ -20,11 +20,11 @@ model objects are embedded within resampled results.
 }
 \examples{
 \dontrun{
-  data(iris)
-  model <- linear_reg()  |>  set_engine("lm")
-  resamples <- vfold_cv(iris)
-  fit_results <- model |>  fit_resamples(resamples)
-  extracted_params <- extract_fit(fit_results)
+data(iris)
+model <- linear_reg() |> set_engine("lm")
+resamples <- vfold_cv(iris)
+fit_results <- model |> fit_resamples(resamples)
+extracted_params <- extract_fit(fit_results)
 }
 
 }

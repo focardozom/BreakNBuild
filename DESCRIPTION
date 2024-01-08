@@ -15,14 +15,22 @@ RoxygenNote: 7.2.3
 Suggests: 
     here,
     knitr,
+    parsnip,
+    recipes,
     rmarkdown,
     testthat (>= 3.0.0),
+    tibble,
+    workflows
 Config/testthat/edition: 3
 Imports: 
     broom,
     dplyr,
+    ggplot2,
+    ggtext,
     purrr,
+    rlang,
     rsample,
+    stringr,
     tidyr,
     tidyselect,
     tune,
