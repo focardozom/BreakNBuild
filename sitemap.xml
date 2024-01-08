@@ -16,7 +16,13 @@
     <loc>https://focardozom.github.io/BreakNBuild/index.html</loc>
   </url>
   <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/create_plot.html</loc>
+  </url>
+  <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/extract_fit.html</loc>
+  </url>
+  <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/get_plot.html</loc>
   </url>
   <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/get_training_error.html</loc>
@@ -26,6 +32,9 @@
   </url>
   <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/plot_theme.html</loc>
   </url>
   <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/progressive_split.html</loc>
