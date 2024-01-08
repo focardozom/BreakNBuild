@@ -17,51 +17,36 @@
 #' @examples
 #' # Example usage:
 #' data(iris)
-#' splits <- progressive_split(iris, validation_size = 0.2, start_size = 10)
+#' splits <- progressive_splits(iris, validation_size = 0.2, start_size = 10)
 #'
 #' @export
 #' @importFrom rsample vfold_cv
 #'
 #' @seealso \link[rsample]{vfold_cv} for details on the underlying cross-validation method.
 
-progressive_split <- function(data, validation_size = 0.2, start_size = 2) {
+progressive_splits <- function(data, validation_size = 0.2, start_size = 2) {
   n <- nrow(data)
+  if (n < 2) stop("Data must have at least two rows", call. = FALSE)
 
-  if (n < 2) {
-    stop("Data must have at least two rows", call. = FALSE)
-  }
-
-  # Calculate the size of the validation set
   validation_n <- max(0, floor(n * validation_size))
   training_max_n <- n - validation_n
 
   if (start_size < 1 || start_size > training_max_n) {
-    stop("start_size must be at least 1 and less than or equal to the number of rows in the training set", call. = FALSE)
+    stop("start_size must be within the valid range for training data", call. = FALSE)
   }
 
-  if (training_max_n < start_size) {
-    stop("Not enough data for training after allocating validation set", call. = FALSE)
-  }
-
-  # Create an initial 'rset' object with enough splits
-  num_initial_splits <- training_max_n - start_size + 1
-  initial_splits <- rsample::vfold_cv(data, v = num_initial_splits)
-
-  # Define a fixed range for the validation set
-  validation_range <- (n - validation_n + 1):n
-
-  # Modify the splits
-  custom_splits <- lapply(start_size:training_max_n, function(i) {
-    analysis <- 1:i
-    split_idx <- i - start_size + 1
-    out <- initial_splits$splits[[split_idx]]
-    out$in_id <- analysis
-    out$out_id <- validation_range
-    out
+  assessment <- (n - validation_n + 1):n
+  indices <- lapply(start_size:training_max_n, function(i) {
+    list(analysis = 1:i, assessment = assessment)
   })
 
-  # Update the 'rset' object
-  initial_splits$splits <- custom_splits
-  initial_splits
+  created_progressive_splits <- lapply(indices, rsample::make_splits, data = data)
+
+  split_names <- paste0("Split ", seq_along(created_progressive_splits))
+
+  progressive_splits <- rsample::manual_rset(created_progressive_splits, split_names)
+
+  return(progressive_splits)
 }
+
 
