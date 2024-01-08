@@ -28,6 +28,9 @@
     <loc>https://focardozom.github.io/BreakNBuild/reference/get_training_error.html</loc>
   </url>
   <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_augment.html</loc>
+  </url>
+  <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_error.html</loc>
   </url>
   <url>
@@ -37,6 +40,6 @@
     <loc>https://focardozom.github.io/BreakNBuild/reference/plot_theme.html</loc>
   </url>
   <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/progressive_split.html</loc>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/progressive_splits.html</loc>
   </url>
 </urlset>
