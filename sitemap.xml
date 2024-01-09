@@ -16,10 +16,19 @@
     <loc>https://focardozom.github.io/BreakNBuild/index.html</loc>
   </url>
   <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/apply_rec.html</loc>
+  </url>
+  <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/create_plot.html</loc>
   </url>
   <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/extrac_prep.html</loc>
+  </url>
+  <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/extract_fit.html</loc>
+  </url>
+  <url>
+    <loc>https://focardozom.github.io/BreakNBuild/reference/get_analysis_augment.html</loc>
   </url>
   <url>
     <loc>https://focardozom.github.io/BreakNBuild/reference/get_plot.html</loc>
