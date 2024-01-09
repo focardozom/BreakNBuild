@@ -9,9 +9,11 @@
 `BreakNBuild` is an R package designed to evaluate model performance with progressively sampled data. This approach is particularly useful for debugging in machine learning, as it allows you to observe the bias-variance trade-off in relation to the sample size used for training the model.
 
 ## Features
-- **Progressive Data Splitting**: Dynamically partition your dataset into training and validation subsets.
+- **Progressive Data Splitting**: partition your dataset into training and validation subsets.
 - **Customizable Sample Sizes**: Control the size of your training data to understand model performance under different conditions.
 - **Easy Integration**: Built on the `rsample` package, `BreakNBuild` seamlessly integrates with the `tidymodels` framework.
+
+![man/figures/schema_progressive_split.svg]
 
 ## Installation
 To install the latest version from GitHub, use:
@@ -28,7 +30,7 @@ Here's a quick example to get you started:
 ```r
 library(BreakNBuild)
 
-splits <- progressive_split(data, validation_size = 0.2, start_size = 10)
+splits <- progressive_splits(data, validation_size = 0.2, start_size = 10)
 
 ```
 
