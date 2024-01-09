@@ -41,6 +41,7 @@ get_training_error <- function(model, splits, metric) {
 
   outcome <- tune::outcome_names(model)
   metric_expr <- parse(text = paste0("yardstick::", metric))
+  rec <- extrac_prep(model)
 
   model |>
     tune::fit_resamples(splits,
@@ -48,6 +49,7 @@ get_training_error <- function(model, splits, metric) {
     ) |>
     tidyr::unnest(.data$.extracts) |>
     dplyr::mutate(data = purrr::map(splits, rsample::analysis)) |>
+    dplyr::mutate(data_preprocessed = purrr::map(.data$data, apply_rec, rec)) |>
     dplyr::mutate(predict = purrr::map2(.data$.extracts, .data$data, broom::augment)) |>
     dplyr::mutate(compute_metric = purrr::map(.data$predict, eval(metric_expr), "truth" = outcome, "estimate" = .data$.pred)) |>
     unnest(.data$compute_metric) |>
