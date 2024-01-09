@@ -80,12 +80,13 @@
 </h2>
 <ul>
 <li>
-<strong>Progressive Data Splitting</strong>: Dynamically partition your dataset into training and validation subsets.</li>
+<strong>Progressive Data Splitting</strong>: partition your dataset into training and validation subsets.</li>
 <li>
 <strong>Customizable Sample Sizes</strong>: Control the size of your training data to understand model performance under different conditions.</li>
 <li>
 <strong>Easy Integration</strong>: Built on the <code>rsample</code> package, <code>BreakNBuild</code> seamlessly integrates with the <code>tidymodels</code> framework.</li>
 </ul>
+<p>[man/figures/schema_progressive_split.svg]</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -102,7 +103,7 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://focardozom.github.io/BreakNBuild/">BreakNBuild</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">splits</span> <span class="op">&lt;-</span> <span class="fu">progressive_split</span><span class="op">(</span><span class="va">data</span>, validation_size <span class="op">=</span> <span class="fl">0.2</span>, start_size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">splits</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/progressive_splits.html">progressive_splits</a></span><span class="op">(</span><span class="va">data</span>, validation_size <span class="op">=</span> <span class="fl">0.2</span>, start_size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 
