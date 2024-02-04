@@ -5,7 +5,7 @@
 #' varying sample sizes.
 #'
 #' @param data A data frame containing the dataset to be split.
-#' @param validation_size A numeric value between 0 and 1 indicating the proportion
+#' @param assessment_size A numeric value between 0 and 1 indicating the proportion
 #'        of the dataset to be used as the validation set. Default is 0.2.
 #' @param start_size An integer indicating the initial size of the training set.
 #'        Must be at least 1 and less than the number of rows in the dataset minus
@@ -17,7 +17,7 @@
 #' @examples
 #' # Example usage:
 #' data(iris)
-#' splits <- progressive_splits(iris, validation_size = 0.2, start_size = 10)
+#' splits <- progressive_splits(iris, assessment_size = 0.2, start_size = 10)
 #'
 #' @export
 #' @importFrom rsample vfold_cv

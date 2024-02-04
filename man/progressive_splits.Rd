@@ -9,12 +9,12 @@ progressive_splits(data, assessment_size = 0, start_size = 2)
 \arguments{
 \item{data}{A data frame containing the dataset to be split.}
 
+\item{assessment_size}{A numeric value between 0 and 1 indicating the proportion
+of the dataset to be used as the validation set. Default is 0.2.}
+
 \item{start_size}{An integer indicating the initial size of the training set.
 Must be at least 1 and less than the number of rows in the dataset minus
 the size of the validation set. Default is 2.}
-
-\item{validation_size}{A numeric value between 0 and 1 indicating the proportion
-of the dataset to be used as the validation set. Default is 0.2.}
 }
 \value{
 An object of class 'rset' containing the training and validation splits
@@ -28,7 +28,7 @@ varying sample sizes.
 \examples{
 # Example usage:
 data(iris)
-splits <- progressive_splits(iris, validation_size = 0.2, start_size = 10)
+splits <- progressive_splits(iris, assessment_size = 0.2, start_size = 10)
 
 }
 \seealso{

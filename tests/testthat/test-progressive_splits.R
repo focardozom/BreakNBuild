@@ -1,7 +1,7 @@
 library(testthat)
 library(tibble)
 
-test_that("progressive_splits with 0% validation works", {
+test_that("progressive_splits with 0%  validation works", {
   df <- data.frame(x = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
   test_zero_val <- progressive_splits(df, 0, 1)
   assessment_size <- 0
@@ -33,7 +33,7 @@ test_that("progressive_splits with 0% validation works", {
   }
 })
 
-test_that("progressive_splits with 10% works", {
+test_that("progressive_splits with 10% validation works", {
   df <- data.frame(x = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
   assessment_size <- 0.1
   test <- progressive_splits(df, 0.1, 1)
