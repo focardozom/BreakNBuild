@@ -24,19 +24,21 @@
 #'
 #' @seealso \link[rsample]{vfold_cv} for details on the underlying cross-validation method.
 
-progressive_splits <- function(data, validation_size = 0.2, start_size = 2) {
+progressive_splits <- function(data, assessment_size = 0, start_size = 2) {
   n <- nrow(data)
   if (n < 2) stop("Data must have at least two rows", call. = FALSE)
 
-  validation_n <- max(0, floor(n * validation_size))
-  training_max_n <- n - validation_n
+  assessment_n <- floor(n * assessment_size)
+  analysis_max_n <- n - assessment_n
 
-  if (start_size < 1 || start_size > training_max_n) {
+  if (start_size < 1 || start_size > analysis_max_n) {
     stop("start_size must be within the valid range for training data", call. = FALSE)
   }
 
-  assessment <- (n - validation_n + 1):n
-  indices <- lapply(start_size:training_max_n, function(i) {
+  # Explicitly handle the case where assessment_n is 0 to ensure an empty assessment
+  assessment <- if (assessment_n > 0) (n - assessment_n + 1):n else integer(0)
+
+  indices <- lapply(start_size:analysis_max_n, function(i) {
     list(analysis = 1:i, assessment = assessment)
   })
 
@@ -48,5 +50,6 @@ progressive_splits <- function(data, validation_size = 0.2, start_size = 2) {
 
   return(progressive_splits)
 }
+
 
 
