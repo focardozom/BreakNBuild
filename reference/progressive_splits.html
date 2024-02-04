@@ -48,7 +48,7 @@ varying sample sizes.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">progressive_splits</span><span class="op">(</span><span class="va">data</span>, validation_size <span class="op">=</span> <span class="fl">0.2</span>, start_size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">progressive_splits</span><span class="op">(</span><span class="va">data</span>, assessment_size <span class="op">=</span> <span class="fl">0</span>, start_size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -57,15 +57,15 @@ varying sample sizes.</p>
 <dd><p>A data frame containing the dataset to be split.</p></dd>
 
 
-<dt>validation_size</dt>
-<dd><p>A numeric value between 0 and 1 indicating the proportion
-of the dataset to be used as the validation set. Default is 0.2.</p></dd>
-
-
 <dt>start_size</dt>
 <dd><p>An integer indicating the initial size of the training set.
 Must be at least 1 and less than the number of rows in the dataset minus
 the size of the validation set. Default is 2.</p></dd>
+
+
+<dt>validation_size</dt>
+<dd><p>A numeric value between 0 and 1 indicating the proportion
+of the dataset to be used as the validation set. Default is 0.2.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -85,6 +85,7 @@ for each iteration of increasing training set size.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Example usage:</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">splits</span> <span class="op">&lt;-</span> <span class="fu">progressive_splits</span><span class="op">(</span><span class="va">iris</span>, validation_size <span class="op">=</span> <span class="fl">0.2</span>, start_size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in progressive_splits(iris, validation_size = 0.2, start_size = 10):</span> unused argument (validation_size = 0.2)</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
