@@ -38,10 +38,10 @@ plot_theme <- function() {
 #' @examples
 #' \dontrun{
 #'   # Assuming validation_results and training_results are available
-#'   get_plot(validation_results, training_results)
+#'   get_learning_curve(validation_results, training_results)
 #' }
 
-get_plot <- function(validation_results, training_results) {
+get_learning_curve <- function(validation_results, training_results) {
   rbind(validation_results, training_results) |>
     dplyr::mutate(id = stringr::str_extract(.data$id, "\\d+")) |>
     dplyr::mutate(id = as.numeric(.data$id)) |>
@@ -81,5 +81,5 @@ create_plot <- function(x,y){
 
   validation_error  <-  get_validation_error(x, y)
   training_error  <-  get_training_error(x, y)
-  get_plot(validation_error, training_error)
+  get_learning_curve(validation_error, training_error)
 }

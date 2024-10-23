@@ -6,7 +6,7 @@
 # BreakNBuild: Optimize Machine Learning Models with Dynamic Data Splits <a href="https://focardozom.github.io/DocumentData/"><img src="man/figures/logo.png" align="right" height="138" alt="DocumentData website" /></a>
 
 ## Overview
-`BreakNBuild` is an R package designed to evaluate model performance with progressively sampled data. This approach is particularly useful for debugging in machine learning, as it allows you to observe the bias-variance trade-off in relation to the sample size used for training the model.
+`BreakNBuild` is designed to evaluate model performance through progressively sampled training data. It offers a structured way to analyze how a model’s accuracy, error, or other metrics evolve as the amount of data increases. This iterative sampling approach is particularly useful for identifying bias-variance trade-offs, diagnosing overfitting or underfitting, and understanding how much data is needed to achieve optimal model performance. With BreakNBuild, users can visualize learning curves, helping to fine-tune algorithms, assess generalization, and debug machine learning models efficiently.
 
 ## Features
 - **Progressive Data Splitting**: partition your dataset into training and validation subsets.
@@ -34,3 +34,6 @@ splits <- progressive_splits(data, validation_size = 0.2, start_size = 10)
 
 ```
 
+This will create a splits object that you can use to train your model using the `tidymodels` ecosystem for Machine Learning. 
+
+For more details on how to use the `BreakNBuild` package, please refer to the [package vignette](https://focardozom.github.io/BreakNBuild/articles/BreakNBuild.html).

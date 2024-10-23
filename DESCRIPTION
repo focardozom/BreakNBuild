@@ -4,14 +4,15 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Francisco", "Cardozo", , "foc9@miami.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1925-4954"))
-Description: BreakNBuild's help to dynamically 
-  segments datasets into training and validation subsets, allowing for 
-  the systematic evaluation of machine learning model 
-  performance across varying sample sizes.
+Description: Provides tools for evaluation of machine learning models by
+    dynamically segmenting datasets into training and validation subsets of varying
+    sizes. This package enables users to assess model performance across different
+    sample sizes, helping to identify optimal training data requirements and
+    understand learning curves.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Suggests: 
     here,
     knitr,
