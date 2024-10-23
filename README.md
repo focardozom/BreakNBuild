@@ -13,7 +13,7 @@
 - **Customizable Sample Sizes**: Control the size of your training data to understand model performance under different conditions.
 - **Easy Integration**: Built on the `rsample` package, `BreakNBuild` seamlessly integrates with the `tidymodels` framework.
 
-![man/figures/schema_progressive_split.svg]
+![man/figures/schema_progressive_splits.svg]
 
 ## Installation
 To install the latest version from GitHub, use:
