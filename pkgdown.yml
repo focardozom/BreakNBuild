@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   BreakNBuild: BreakNBuild.html
-last_built: 2024-10-23T16:05Z
+last_built: 2024-10-23T16:07Z
 urls:
   reference: https://focardozom.github.io/BreakNBuild/reference
   article: https://focardozom.github.io/BreakNBuild/articles
