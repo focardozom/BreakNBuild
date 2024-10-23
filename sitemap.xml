@@ -1,54 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/404.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/index.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/apply_rec.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/create_plot.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/extrac_prep.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/extract_fit.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/get_analysis_augment.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/get_plot.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/get_training_error.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_augment.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_error.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/plot_theme.html</loc>
-  </url>
-  <url>
-    <loc>https://focardozom.github.io/BreakNBuild/reference/progressive_splits.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://focardozom.github.io/BreakNBuild/404.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/LICENSE-text.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/LICENSE.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/articles/BreakNBuild.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/articles/index.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/authors.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/index.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/apply_rec.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/create_plot.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/extrac_prep.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/extract_fit.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/get_analysis_augment.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/get_learning_curve.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/get_training_error.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_augment.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/get_validation_error.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/index.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/plot_theme.html</loc></url>
+<url><loc>https://focardozom.github.io/BreakNBuild/reference/progressive_splits.html</loc></url>
 </urlset>
+
